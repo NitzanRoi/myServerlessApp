@@ -1,0 +1,15 @@
+html {
+    font-family: sans-serif;
+    line-height: 1.15;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%
+}
+
+body {
+    margin: 0;
+    text-align: center;
+}
+
+h1.title {
+    color: red;
+}

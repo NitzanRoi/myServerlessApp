@@ -83,14 +83,17 @@ class myDB:
             return self.handle_error_case(headers, item["error_msg"])
         else:
             if "Item" in item:
-                sbs_type = item["Item"]["type_of_subscription"]
+                subscription_type = item["Item"]["type_of_subscription"]
+                register_date = item["Item"]["registration_date"]
             else:
-                sbs_type = "not found"
+                subscription_type = None
+                register_date = None
         return {
             'statusCode': 200,
             'headers': headers,
             'body': json.dumps({
-                "subscription_type": sbs_type
+                "subscription_type": subscription_type,
+                "register_date": register_date
             })
         }
 
